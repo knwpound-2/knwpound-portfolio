@@ -8,7 +8,7 @@ export function Banner() {
   return (
     <div className="h-auto pb-20 w-full overflow-hidden">
       <div
-        className="absolute h-[180vh] inset-0 animate-pulseCircle1"
+        className="absolute h-[100vh] lg:h-[180vh] inset-0 animate-pulseCircle1"
         style={{
           background:
             "radial-gradient(circle at 50% 40%, #EECE7B, transparent, transparent)",
@@ -17,7 +17,7 @@ export function Banner() {
       ></div>
 
       <div
-        className="absolute h-[200vh] inset-0 animate-pulseCircle2"
+        className="absolute h-[100vh] lg:h-[200vh] inset-0 animate-pulseCircle2"
         style={{
           background:
             "radial-gradient(circle at 30% 40%, #FF8D4B, #ffff, #ffff)",
