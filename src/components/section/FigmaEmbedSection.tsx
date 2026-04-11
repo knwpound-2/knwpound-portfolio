@@ -1,34 +1,45 @@
-// components/FigmaEmbedSection.tsx
+// components/LinkEmbedSection.tsx
 import React, { ReactNode } from "react";
-import FigmaEmbed from "../ui/FigmaEmbed";
+import LinkEmbed from "../ui/FigmaEmbed";
+import Carousel from "../ui/Carousel"; // เรียกใช้ตัวที่เพิ่งสร้าง
 
-interface FigmaSectionProps {
+interface LinkSectionProps {
   title: string;
-  figmaLink: string;
+  figmaLink?: string;
+  images?: string[]; // รับอาเรย์ของ path รูปภาพ
   description: ReactNode;
-  isReversed?: boolean; // เพิ่ม Prop สำหรับสลับฝั่ง (Optional)
+  isReversed?: boolean;
 }
 
-export default function FigmaEmbedSection({
+export default function LinkEmbedSection({
   title,
   figmaLink,
+  images,
   description,
-  isReversed = false, // ค่าเริ่มต้นเป็น false (Embed อยู่ซ้ายเหมือนเดิม)
-}: FigmaSectionProps) {
+  isReversed = false,
+}: LinkSectionProps) {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full">
       <div 
         className={`w-full flex flex-col items-center justify-center gap-10 p-6 md:px-16 
           ${isReversed ? "lg:flex-row-reverse" : "lg:flex-row"}`}
       >
-        {/* ส่วนของ Figma */}
-        <div className="w-full lg:w-2/3 h-full">
-          <FigmaEmbed figmaLink={figmaLink} />
+        {/* Media Side: เช็กว่ามีรูปไหม ถ้าไม่มีค่อยไปเช็ก Figma */}
+        <div className="w-full lg:w-2/3">
+          {images && images.length > 0 ? (
+            <Carousel images={images} alt={title} />
+          ) : figmaLink ? (
+            <LinkEmbed link={figmaLink} />
+          ) : (
+            <div className="aspect-video bg-gray-200 rounded-xl flex items-center justify-center">
+              No Media Available
+            </div>
+          )}
         </div>
 
-        {/* ส่วนของ Content */}
+        {/* Text Side */}
         <div className="w-full lg:w-1/3 flex flex-col gap-4">
-          <h1 className="font-serif text-xl lg:text-3xl font-semibold text-slate-900 truncate whitespace-nowrap">
+          <h1 className="font-serif text-xl lg:text-3xl font-semibold text-slate-900 leading-tight">
             {title}
           </h1>
           <div className="text-sm space-y-4 text-justify leading-relaxed text-gray-700">
