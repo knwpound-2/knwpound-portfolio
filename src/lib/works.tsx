@@ -62,3 +62,43 @@ export const fitnessAppDescription = (
     </p>
   </>
 );
+
+export const chatWebsiteDescription = (
+  <>
+    <p>
+      This project is a{" "}
+      <mark className="bg-blue-100 px-1">real-time chat application</mark>{" "}
+      built using <b>Next.js</b>, <b>Socket.io</b>, and <b>MongoDB</b>. I was
+      responsible for <b>project planning</b> and <b>task distribution</b>,
+      ensuring smooth collaboration and development flow.
+    </p>
+
+    <p className="text-sm text-justify">
+      I worked across the full development process, from{" "}
+      <i>UI interface design</i> and{" "}
+      <mark className="bg-emerald-100 px-1">project setup</mark> to implementing{" "}
+      <b>real-time communication</b> via Socket connections. The system supports{" "}
+      <i>live messaging</i>, <b>online user tracking</b>.
+    </p>
+  </>
+);
+
+export const sdsDescription = (
+  <>
+    <p>
+      This project focuses on{" "}
+      <mark className="bg-blue-100 px-1">fault-tolerant system design</mark>{" "}
+      using <b>Kubernetes</b> to manage distributed services across multiple{" "}
+      <b>Raspberry Pi nodes</b>. The goal was to ensure <b>high availability</b>{" "}
+      and system reliability even under node failure conditions.
+    </p>
+
+    <p className="text-sm text-justify">
+      I worked on <b>service provisioning</b>,{" "}
+      <i>container orchestration</i>, and deploying workloads in a{" "}
+      <mark className="bg-emerald-100 px-1">clustered environment</mark>. When a
+      node goes down, the system automatically <b>redistributes workloads</b>{" "}
+      to other nodes, maintaining continuous operation with minimal disruption.
+    </p>
+  </>
+);
