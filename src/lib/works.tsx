@@ -20,6 +20,10 @@ export const cpWebsiteDescription = (
       <mark className="bg-orange-100 px-1">High-Fidelity Wireframes</mark> and a{" "}
       <i>Clickable Prototype</i> for final user testing.
     </p>
+    <a href="https://cp.ratchanon.works/" target="_blank"
+    className="p-2 shadow-sm hover:underline transition-all duration-300">
+      Open site
+    </a>
   </>
 );
 
@@ -67,8 +71,8 @@ export const chatWebsiteDescription = (
   <>
     <p>
       This project is a{" "}
-      <mark className="bg-blue-100 px-1">real-time chat application</mark>{" "}
-      built using <b>Next.js</b>, <b>Socket.io</b>, and <b>MongoDB</b>. I was
+      <mark className="bg-blue-100 px-1">real-time chat application</mark> built
+      using <b>Next.js</b>, <b>Socket.io</b>, and <b>MongoDB</b>. I was
       responsible for <b>project planning</b> and <b>task distribution</b>,
       ensuring smooth collaboration and development flow.
     </p>
@@ -94,11 +98,11 @@ export const sdsDescription = (
     </p>
 
     <p className="text-sm text-justify">
-      I worked on <b>service provisioning</b>,{" "}
-      <i>container orchestration</i>, and deploying workloads in a{" "}
+      I worked on <b>service provisioning</b>, <i>container orchestration</i>,
+      and deploying workloads in a{" "}
       <mark className="bg-emerald-100 px-1">clustered environment</mark>. When a
-      node goes down, the system automatically <b>redistributes workloads</b>{" "}
-      to other nodes, maintaining continuous operation with minimal disruption.
+      node goes down, the system automatically <b>redistributes workloads</b> to
+      other nodes, maintaining continuous operation with minimal disruption.
     </p>
   </>
 );
