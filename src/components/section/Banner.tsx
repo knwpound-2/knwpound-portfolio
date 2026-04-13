@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useAOS } from "@/้hooks/useAos";
 
 import { FlipText } from "../ui/FlipText";
-export function Banner() {
+export function Banner({dev=false}:{dev?:boolean}) {
   useAOS(1500);
   return (
     <div className="h-auto pb-20 w-full overflow-hidden">
@@ -37,7 +37,7 @@ export function Banner() {
           <p className="font-serif italic text-sm md:text-xl lg:text-3xl">
             Sawasdee ka, Your Favorite
           </p>
-          <FlipText />
+          <FlipText dev={dev}/>
           <p className="font-serif italic text-sm md:text-3xl md:hidden">
             <mark className="font-semibold bg-red-100 px-1">Designer</mark> is
             here

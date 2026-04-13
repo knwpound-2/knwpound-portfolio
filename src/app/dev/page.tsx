@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <section id="home">
-        <Banner />
+        <Banner dev={true}/>
       </section>
       <section id="lately">
         <Capstone skills={DEV_SKILLS_DATA}/>
@@ -22,7 +22,7 @@ export default function Home() {
       <section id="work">
         <LinkEmbedSection
           title="CP Website Redesign"
-          figmaLink="https://cp.ratchanon.works/"
+          figmaLink="https://embed.figma.com/proto/omfIdKjQSJmBEcNpgwRctD/Wireframe?page-id=&node-id=49-71&m=dev&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=49%3A71&embed-host=share"
           description={cpWebsiteDescription}
         />
         <LinkEmbedSection
